@@ -40,6 +40,8 @@ jobs:
         # https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v5
         # using operating system process environment variables
+        with:
+           spec: cypress/e2e/dropdown-examples/*.js
         env:
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
